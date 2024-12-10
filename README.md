@@ -20,6 +20,8 @@
 - **Vue** - 代码使用 Vue3 书写
 - **Ant Design Vue** - 由 [Ant Design Vue](https://antdv.com/components/overview) 组件库强力驱动
 
+<div style="text-align:center;margin-top:30px"><img src="public/img/ui.png"></div>
+
 ## 🌈 使用
 
 开发模式，需要启动网页服务，再开启 Electron 服务：
