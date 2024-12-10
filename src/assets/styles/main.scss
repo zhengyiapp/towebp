@@ -1,0 +1,246 @@
+:root{
+  --primary: 22, 113, 216;
+  --second: 22, 113, 216;
+  --third: 22, 113, 216;
+  --error: 216, 22, 71;
+  --warn: 255, 174, 0;
+  --info: 22, 113, 216;
+  --success: 15, 179, 89;
+  --content: 51, 51, 51;
+  --white: 255, 255, 255;
+  --gold: 255, 230, 142;
+  --brown: 158, 84, 15;
+  --black: 0, 0, 0;
+  --borderColor: rgba(var(--content), .1);
+  --fontBaseSize: 14px;
+  --padding: 16px;
+  --fontFamily: "Noto Sans SC",Noto Sans,-apple-system,BlinkMacSystemFont;
+}
+
+html,body{
+  padding: 0;
+  margin: 0;
+  color: rgb(var(--content));
+  font-size: var(--fontBaseSize);
+  font-family: var(--fontFamily);
+  line-height: 1.6;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(var(--content));
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+  image-rendering:-moz-optimize-contrast;
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:-o-optimize-contrast;
+  image-rendering:optimize-contrast;
+}
+
+textarea{
+  font-family: var(--fontFamily);
+  font-size: var(--fontBaseSize);
+}
+
+input:not([type=checkbox],[type=radio]), textarea {
+  outline: 0;
+  transition: all .3s;
+  border: solid 1px var(--borderColor);
+  width: 100%;
+  min-height: 30px;
+  padding: .5em;
+  border-radius: 4px;
+  &:focus{
+    border: solid 1px rgb(var(--primary));
+    box-shadow: 0 0 0 2px rgba(var(--primary), .1);
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.disabled{
+  pointer-events: none;
+  opacity: .85;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+.break{
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.scroll{
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    background: none;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(var(--content), .1);
+    border-radius: 3px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background: rgba(var(--content), .2);
+  }
+}
+
+$txtColors: (
+  'pr': rgb(var(--primary)),
+  'se': rgb(var(--second)),
+  'th': rgb(var(--third)),
+  'er': rgb(var(--error)),
+  'wa': rgb(var(--warn)),
+  'in': rgb(var(--info)),
+  'su': rgb(var(--success)),
+  'co': rgb(var(--content)),
+  'gr': rgba(var(--content), .5),
+  'gr80': rgba(var(--content), .8),
+  'wh': rgb(var(--white)),
+  'bl': rgb(var(--black))
+);
+@each $key, $val in $txtColors {
+  .txt-#{$key}{
+    color: $val!important;
+    fill: $val!important;
+  }
+  .txt-#{$key}-hover:hover{
+    color: $val!important;
+    fill: $val!important;
+  }
+  .bg-#{$key}{
+    background-color: $val!important;
+  }
+};
+
+// .ellipsis-1{
+//   overflow: hidden;text-overflow:ellipsis;white-space: nowrap;
+// }
+$ellipsis: 1, 2, 3, 4;
+@each $val in $ellipsis {
+  .ellipsis-#{$val}{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $val;
+    overflow: hidden;
+  }
+};
+
+$fontSizes: (
+  8: 0.5714em,
+  10: 0.7143em,
+  12: 0.8571em,
+  14: 1em,
+  16: 1.1428em,
+  18: 1.2857em,
+  20: 1.4286em,
+  24: 1.7143em,
+  30: 2.1428em,
+  36: 2.5714em,
+  48: 3.4286em
+);
+@each $key, $val in $fontSizes {
+  .font-#{$key}{
+    font-size: $val!important;
+  }
+};
+
+$displays: (
+  'i': inline,
+  'b': block,
+  'ib': inline-block,
+  'f': flex,
+  'if': inline-flex,
+  'g': grid,
+  'n': none
+);
+$flexAligns: (
+  'ac': center,
+  'as': flex-start,
+  'ae': flex-end
+);
+$flexJustify: (
+  'jc': center,
+  'jb': space-between,
+  'ja': space-around,
+  'js': flex-start,
+  'je': flex-end
+);
+@each $key, $val in $displays {
+  .display-#{$key}{
+    display: $val!important;
+  }
+};
+@each $key, $val in $flexAligns {
+  .flex-#{$key}{
+    align-items: $val;
+    align-content: $val;
+  }
+};
+@each $key, $val in $flexJustify {
+  .flex-#{$key}{
+    justify-content: $val;
+  }
+};
+.flex-wr{
+  flex-wrap: wrap;
+}
+.flex-col{
+  flex-direction: column;
+}
+
+$margins: (
+  'auto': auto
+);
+@each $key, $val in $margins {
+  .ml-#{$key}{
+    margin-left: $val!important;
+  }
+  .mr-#{$key}{
+    margin-right: $val!important;
+  }
+};
+@each $key, $val in $fontSizes {
+  .ml-#{$key}{
+    margin-left: $val!important;
+  }
+  .mr-#{$key}{
+    margin-right: $val!important;
+  }
+  .mt-#{$key}{
+    margin-top: $val!important;
+  }
+  .mb-#{$key}{
+    margin-bottom: $val!important;
+  }
+  .pl-#{$key}{
+    padding-left: $val!important;
+  }
+  .pr-#{$key}{
+    padding-right: $val!important;
+  }
+  .pt-#{$key}{
+    padding-top: $val!important;
+  }
+  .pb-#{$key}{
+    padding-bottom: $val!important;
+  }
+  .gap-#{$key}{
+    gap: $val;
+  }
+};

@@ -1,0 +1,1 @@
+\sp-id="\d+"|\st="\d+"|\sclass="icon"|\swidth="\d+"|\sheight="\d+"|\sfill="#\w+"

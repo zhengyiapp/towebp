@@ -1,0 +1,66 @@
+:root {
+  --boxShadow: 0 0 12px rgba(0,0,0,.1);
+  --borderColor: #eee;
+}
+.ant-tabs-nav{
+  padding: 0 20px;
+  margin: 0 !important;
+}
+
+@each $val in 1200,1000,800,600 {
+	.max-#{$val}{
+		width: #{$val}px;
+    max-width: 100%;
+		margin-left: auto;
+    margin-right: auto;
+	}
+}
+
+.batch-import-wrapper{
+	position: relative;
+  input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 9;
+  }
+}
+
+.tox.tox-tinymce-inline .tox-editor-header,.tox:not([dir=rtl]){
+  border:0!important;
+}
+.tox .tox-statusbar{
+  background-color: var(--bgGrey);
+  border-top-color: var(--borderColor);
+}
+.tox-shadowhost.tox-fullscreen, .tox.tox-tinymce.tox-fullscreen{
+  z-index: 998!important;
+}
+
+.pannel{
+  .phead{
+    padding: 16px;
+    font-size: 17px;
+  }
+  hr{
+    margin: 0;
+  }
+}
+
+.content-list-page{
+  .poster{
+    height: 32px;
+    width: 26px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type){
+  border-right: 1px solid var(--borderColor)!important;
+}

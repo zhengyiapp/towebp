@@ -1,0 +1,4 @@
+@mixin flex-cols($cols, $gap){
+  flex: 0 0 calc(100%/$cols - ($gap - $gap / $cols));
+  width: calc(100%/$cols - ($gap - $gap / $cols));
+}
