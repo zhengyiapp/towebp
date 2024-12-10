@@ -10,7 +10,7 @@
 [![stars](https://img.shields.io/github/stars/zhengyiapp/towebp?style=flat-square&logo=GitHub)](https://github.com/zhengyiapp/towebp)
 ![Node](https://img.shields.io/badge/Node-v22+-red)
 ![Vue](https://img.shields.io/badge/Vue-v3-red)
-![Electron](https://img.shields.io/badge/Redis-required-green)
+![Electron](https://img.shields.io/badge/Electron-required-green)
 </div>
 
 ## ✨ 功能与特色
