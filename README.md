@@ -20,7 +20,7 @@
 - **Vue** - 代码使用 Vue3 书写
 - **Ant Design Vue** - 由 [Ant Design Vue](https://antdv.com/components/overview) 组件库强力驱动
 
-<div style="text-align:center;margin-top:30px"><img src="public/img/ui.png"></div>
+<div style="text-align:center;margin-top:30px"><img src="public/img/ui.png" style="border:solid 1px rgba(0,0,0,.1)"></div>
 
 ## 🌈 使用
 

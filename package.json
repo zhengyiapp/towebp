@@ -1,8 +1,9 @@
 {
-  "name": "electron-demo",
+  "name": "towebp",
   "private": true,
   "version": "0.0.0",
   "main": "index.js",
+  "author": "dly6.com",
   "scripts": {
     "dev": "cross-env VITE_PORT=7000 vite",
     "static": "vite build",

@@ -90,7 +90,7 @@ module.exports = ({win}) => {
               }
             })
           })
-          : exec(`${path.join(__dirname, isDev ? '../lib/webp/bin/cwebp.exe' : '../../../lib/webp/bin/cwebp.exe')} -q ${args?.rate || 99} -lossless "${filePath}" -o "${webpFilePath}"`, (error) => {
+          : exec(`${path.join(__dirname, isDev ? '../lib/webp/bin/cwebp.exe' : '../../../lib/webp/bin/cwebp.exe')} -q ${args?.rate || 99} "${filePath}" -o "${webpFilePath}"`, (error) => {
             if (error) {
               console.error(error)
               file.status = 'error'
